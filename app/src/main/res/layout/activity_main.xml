@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="codeweek.uma.org.biggergamecodeweek.MainActivity"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_gravity="center_horizontal"
+        android:text="Hello World!" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Please select the biggest Number"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <Button
+            android:id="@+id/left_btn"
+            android:onClick="handleGameClick"
+            android:text="-"
+            android:layout_width="0px"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"/>
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:layout_weight="0.3"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Score:"/>
+            <TextView
+                android:id="@+id/score_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Score:"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/right_btn"
+            android:onClick="handleGameClick"
+            android:text="-"
+            android:layout_width="0px"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/game_over_label"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:text="GAME OVER!!!"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2px"></LinearLayout>
+
+    <TextView
+        android:id="@+id/gyro_values_label"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SELECT"
+        android:layout_gravity="center_horizontal"
+        android:onClick="handleSelectionClick"/>
+
+</LinearLayout>
